@@ -11,7 +11,7 @@ import SwiftUI
 struct GoGoPizza_test_App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AuthView()
         }
     }
 }
