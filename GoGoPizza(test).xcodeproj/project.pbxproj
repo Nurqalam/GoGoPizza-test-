@@ -15,6 +15,10 @@
 		B536C7792838CAE500E3F612 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536C7782838CAE500E3F612 /* CatalogView.swift */; };
 		B536C77B2838CB2000E3F612 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536C77A2838CB2000E3F612 /* CartView.swift */; };
 		B536C77D2838CB3600E3F612 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536C77C2838CB3600E3F612 /* ProfileView.swift */; };
+		B536C780283905D400E3F612 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536C77F283905D400E3F612 /* Product.swift */; };
+		B536C782283906FC00E3F612 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536C781283906FC00E3F612 /* ProductCell.swift */; };
+		B536C78628390B3300E3F612 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536C78528390B3300E3F612 /* CatalogViewModel.swift */; };
+		B536C7892839127B00E3F612 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B536C7882839127B00E3F612 /* ProductDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		B536C7782838CAE500E3F612 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		B536C77A2838CB2000E3F612 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		B536C77C2838CB3600E3F612 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B536C77F283905D400E3F612 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B536C781283906FC00E3F612 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		B536C78528390B3300E3F612 /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
+		B536C7882839127B00E3F612 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +68,9 @@
 			isa = PBXGroup;
 			children = (
 				B536C7682837995100E3F612 /* GoGoPizza_test_App.swift */,
-				B536C76A2837995100E3F612 /* AuthView.swift */,
-				B536C7762838B7ED00E3F612 /* MainTabBar.swift */,
-				B536C77A2838CB2000E3F612 /* CartView.swift */,
-				B536C77C2838CB3600E3F612 /* ProfileView.swift */,
-				B536C7782838CAE500E3F612 /* CatalogView.swift */,
+				B536C78428390B0900E3F612 /* Models */,
+				B536C77E2839059D00E3F612 /* View */,
+				B536C78728390B4300E3F612 /* ViewModel */,
 				B536C76C2837995300E3F612 /* Assets.xcassets */,
 				B536C76E2837995300E3F612 /* Preview Content */,
 			);
@@ -77,6 +83,44 @@
 				B536C76F2837995300E3F612 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B536C77E2839059D00E3F612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B536C7832839070300E3F612 /* Components */,
+				B536C76A2837995100E3F612 /* AuthView.swift */,
+				B536C7762838B7ED00E3F612 /* MainTabBar.swift */,
+				B536C7782838CAE500E3F612 /* CatalogView.swift */,
+				B536C77A2838CB2000E3F612 /* CartView.swift */,
+				B536C77C2838CB3600E3F612 /* ProfileView.swift */,
+				B536C7882839127B00E3F612 /* ProductDetailView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B536C7832839070300E3F612 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B536C781283906FC00E3F612 /* ProductCell.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		B536C78428390B0900E3F612 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B536C77F283905D400E3F612 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B536C78728390B4300E3F612 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B536C78528390B3300E3F612 /* CatalogViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,11 +194,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B536C77B2838CB2000E3F612 /* CartView.swift in Sources */,
+				B536C7892839127B00E3F612 /* ProductDetailView.swift in Sources */,
 				B536C7772838B7ED00E3F612 /* MainTabBar.swift in Sources */,
 				B536C76B2837995100E3F612 /* AuthView.swift in Sources */,
 				B536C7692837995100E3F612 /* GoGoPizza_test_App.swift in Sources */,
 				B536C77D2838CB3600E3F612 /* ProfileView.swift in Sources */,
+				B536C782283906FC00E3F612 /* ProductCell.swift in Sources */,
 				B536C7792838CAE500E3F612 /* CatalogView.swift in Sources */,
+				B536C780283905D400E3F612 /* Product.swift in Sources */,
+				B536C78628390B3300E3F612 /* CatalogViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

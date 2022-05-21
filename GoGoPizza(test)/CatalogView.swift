@@ -8,8 +8,45 @@
 import SwiftUI
 
 struct CatalogView: View {
+    
+    let layoutForPopupal = [GridItem(.adaptive(minimum: screen.width / 2.2))]
+    let layoutForPizza = [GridItem(.adaptive(minimum: screen.width / 2.4))]
+    
     var body: some View {
-        Text("Каталог!!!")
+        
+        ScrollView(.vertical, showsIndicators: false) {
+            
+            Section("Популярное") {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHGrid(rows: layoutForPopupal, spacing: 20) {
+                        ForEach(CatalogViewModel.shared.popularProducts, id: \.id) { item in
+                            NavigationLink {
+                                ProductDetailView(product: item)
+                            } label: {
+                                ProductCell(product: item)
+                                    .foregroundColor(.black)
+                            }
+                        }
+                    }.padding()
+                }
+            }
+            
+            Section("Пицца") {
+                ScrollView(.vertical, showsIndicators: false) {
+                    LazyVGrid(columns: layoutForPizza, spacing: 20) {
+                        ForEach(CatalogViewModel.shared.popularProducts, id: \.id) { item in
+                            NavigationLink {
+                                ProductDetailView(product: item)
+                            } label: {
+                                ProductCell(product: item)
+                                    .foregroundColor(.black)
+                            }
+                        }
+                    }.padding()
+                }
+            }
+        }
+        .navigationTitle(Text("Каталог"))
     }
 }
 

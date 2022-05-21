@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let screen = UIScreen.main.bounds
+
 @main
 struct GoGoPizza_test_App: App {
     var body: some Scene {

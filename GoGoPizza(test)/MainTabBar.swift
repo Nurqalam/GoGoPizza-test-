@@ -11,8 +11,9 @@ struct MainTabBar: View {
     var body: some View {
         
         TabView {
-            
-            CatalogView()
+            NavigationView {
+                CatalogView()
+            }
                 .tabItem {
                     VStack {
                         Image(systemName: "greetingcard")
