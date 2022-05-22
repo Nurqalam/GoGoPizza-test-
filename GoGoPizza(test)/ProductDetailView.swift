@@ -21,7 +21,7 @@ struct ProductDetailView_Previews: PreviewProvider {
         ProductDetailView(product: Product(id: "1",
                                            title: "Маргарита Африканская",
                                            imageUrl: "Not found",
-                                           price: 450,
+                                           price: String(2450),
                                            descript: "Обычная немножко измененная Маргарита"))
     }
 }

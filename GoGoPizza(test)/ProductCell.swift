@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductCell: View {
     
     var product: Product
+    let tengeImg = UIImage(systemName: "tengesign.circle")
     
     var body: some View {
         
@@ -19,13 +20,12 @@ struct ProductCell: View {
                 .aspectRatio(contentMode: .fill)
                 .frame(maxWidth: screen.width * 0.45)
                 .clipped()
-//                .cornerRadius(16)
             HStack {
                 Text(product.title)
                     .font(.custom("AvenirNext-regular", size: 13))
                     .frame(width: 100, height: 36, alignment: .leading)
-                Text("\(product.price) $")
-                    .font(.custom("AvenirNext-bold", size: 13))
+                Text("\(product.price)\(Image(systemName: "tengesign.circle"))")
+                    .font(.custom("AvenirNext-bold", size: 15))
             }
             .padding(.horizontal, 6)
             .padding(.bottom, 6)
@@ -43,7 +43,7 @@ struct ProductCell_Previews: PreviewProvider {
         ProductCell(product: Product(id: "1",
                                      title: "Маргарита Африканская",
                                      imageUrl: "Not found",
-                                     price: 450,
+                                     price: String(2450),
                                      descript: "Обычная немножко измененная Маргарита"))
     }
 }
